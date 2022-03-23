@@ -1,0 +1,29 @@
+p{
+   color:lightgoldenrodyellow;
+   font-size: 50px;
+
+
+
+
+}
+body{
+	background-color:lightgrey;
+}
+*{
+   color: rosybrown;
+   font-family: italic;
+}
+img{
+   display: inline;
+}
+div{}
+
+
+
+.columns{
+      float: left;
+      width: 25%;
+   }  
+.row{
+      }
+
