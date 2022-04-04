@@ -1,31 +1,87 @@
 
 
-
-<!DOCTYPE html>
-<html>
+tml>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+<script src='untitled.js'></script>
 </head>
-<body>
-<h1 id="one">hello</h1>
-<p id="cal"></p>
-<button onclick="document.getElementById('cal') innerHTMl=1+1">Click to see the result of 1+1</button>
+<body onkeydown="showAlert()">
+  <p id="date"></p>
+<p id="demo" onclick="text()">Click me to change my text </p>
+
+<img 
+    src='https://cdn2.iconfinder.com/data/icons/crystalproject/128x128/apps/clean.png' 
+    onmouseover =  src="https://images.unsplash.com/photo-1648913163154-581667722585?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60"
+    id="news"
+>
+<p id="demotem"></p>
+<h1><input id="c" onkeyup="convert('F')"> degrees Celsius</h1>
+
+
+  <label>First Number:</label>
+        <input id="txt1" /><br />
+        <label>Second Number:</label>
+        <input id="txt2" /><br />
+
+        <input type="button" name="Add" value="Add" onclick="addTwoNumber()"/>
+        <p id="demo"></p>
+        <div id="welcomeTheUsar">
+    <input placeholder="Enter First Name" id="first-name">
+    <input placeholder="Enter Last Name" id="last-name">
+    <button onclick="welcomeTheUsar()">Greetings</button>
+</div>
 
 
 
 
-<img id='img' src= "'https://www.w3schools.com/js/pic_bulboff.gif' width=200px height=200px">
+<script>
+  document.getElementById("date").innerHTML= Date()
+function text() {
+  document.getElementById("demo").innerHTML = "red";
+}
+function func()
+            {
+                
+                document.getElementById('text').style.backgroundColor='red';
+                document.getElementById('text').style.fontFamily = "Arial";
+                document.getElementById("text").style.textAlign=  "center";
+            }
 
-<button onclick="document.getElementById('img').src= 'https://www.w3schools.com/js/pic_bulbon.gif'" >click to turn on</button>
 
-<button onclick="document.getElementById('img').src= 'https://www.w3schools.com/js/pic_bulboff.gif'">click to turn off</button>
-<button onclick="document.getElementById('one').style.color='red'">color change</button>
-<button onclick="document.getElementById('one').style.fontSize ='50px'">click to change size</button>
-<button onclick="document.getElementById('one').style.textDecoration='underline'">click to add underline</button>
-<button onclick="document.getElementById('one').style.backgroundColor='yellow'">ba</button>
-<button onclick="document.write(1+1)">Documentwrite</button>
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+document.getElementById("demotem").innerHTML = toCelsius(20);
+
+ function myFunction() {
+                document.getElementById("demo").innerHTML = Date();
+            }
+
+            function addTwoNumber(){
+                var a = document.getElementById("txt1").value;
+                var b = document.getElementById("txt2").value;
+
+                var x = Number(a) + Number(b);
+                document.getElementById("demo").innerHTML = "Add Value: " + x;
+            }
+  function welcomeTheUsar() {
+    const
+        firstName = document.getElementById("first-name").value,
+        lastName = document.getElementById("last-name").value;
+alert(`Nice to meet you ${firstName} ${lastName}`);
+}
+function sum(){
+  var a = parseFloat(prompt('number 1: '));
+  var b = parseFloat(prompt('number 2: '));
+  document.getElementById('sum').innerHTML = a+b;
+}
+function showAlert() {
+    alert ("dont touch thanks");
+  }
+
+
+
+</script>
+
 
 
 </body>
